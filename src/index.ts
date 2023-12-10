@@ -4,7 +4,6 @@
  import cors from 'cors';
  import swaggerDocument from './swagger.json';
  import swagger_ui_express from 'swagger-ui-express';
- import indexRoutes from './routes/indexRoutes';
  import UsuarioRoutes from './routes/UsuarioRoutes';
 import bibliotecaRoutes from './routes/bibliotecaRoutes';
 import JuegosRoutes from './routes/JuegosRoutes';
@@ -25,7 +24,7 @@ import VentasRoutes from './routes/VentasRoutes';
     }
     config (): void
     {
-        this.app.set('port',process.env.PORT|| 3000);
+        this.app.set('port',process.env.PORT|| 3306);
         this.app.use (morgan('dev'));
         this.app.use (cors());
         this.app.use (express.json());
