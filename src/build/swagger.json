@@ -18,19 +18,19 @@
         },
         {
             "name": "Biblioteca",
-            "description": "API para obtener información de la biblioteca"
+            "description": "API para obtener información de bibliotecas de usuario"
         },
         {
             "name": "Juegos",
-            "description": "API para obtener información de los juegos"
+            "description": "API para obtener información de los juegos con los que cuenta el portal"
         },
         {
             "name": "Carrito",
-            "description": "API para obtener información de los carritos de los usuarios"
+            "description": "API para obtener información de los carritos de los usuarios, es decir, las compras que el usuario desea"
         },
         {
             "name": "Ventas",
-            "description": "API para obtener información de las ventas realizadas"
+            "description": "API para obtener información de las ventas realizadas en el portal"
         }
     ],
     "schemes": [
@@ -59,8 +59,8 @@
                                     "id": 1,
                                     "alias": "Astaroth",
                                     "correo": "holacomo@adios.com",
-                                    "contraseña": "utm123*",
-                                    "año_ingreso": "2002-02-07"
+                                    "password": "utm123*",
+                                    "ano_ingreso": "2002-02-07"
                                 }
                             ]
                         },
@@ -97,8 +97,8 @@
                                     "id": 10,
                                     "alias": "Chato",
                                     "correo": "chato@gmail.com",
-                                    "contrasena": "789*",
-                                    "año_ingreso": "2016-02-06"
+                                    "password": "789*",
+                                    "ano_ingreso": "2016-02-06"
                                 }
                             ]
                         },
@@ -169,7 +169,7 @@
         },
         "/api/usuario/crearUsuario": {
             "post": {
-                "summary": "Crea a un usuario nuevo y de igual forma crea su biblioteca",
+                "summary": "Crea a un usuario nuevo",
                 "operationId": "create",
                 "produces": [
                     "application/json"
@@ -258,7 +258,7 @@
                 "tags": [
                     "Usuarios"
                 ],
-                "summary": "Eliminar el usuario del portal dado su identificador",
+                "summary": "Eliminar el usuario del portal dado su identificador, asi como su carrito y su biblioteca",
                 "description": "<p>Servicio que elimina el usuario dado el identificador enviado</p>",
                 "responses": {
                     "200": {
@@ -589,7 +589,7 @@
         },
         "/api/carrito/agregaACarrito": {
             "post": {
-                "summary": "Agrega un nuevo producto al carrito",
+                "summary": "Agrega un nuevo producto al carrito, es decir, aqui se encuentran los productos que el usuario desea comprar",
                 "operationId": "create",
                 "produces": [
                     "application/json"
@@ -1013,11 +1013,11 @@
                     "type": "string",
                     "description": "Correo del usuario"
                 },
-                "año_ingreso": {
+                "ano_ingreso": {
                     "type": "date",
                     "description": "Fecha en el que el usuario ingreso por primera vez al portal"
                 },
-                "contrasena": {
+                "password": {
                     "type": "string",
                     "description": "Contrasena del usuario"
                 }
@@ -1034,7 +1034,7 @@
                     "type": "string",
                     "description": "Correo del usuario"
                 },
-                "contraseña": {
+                "password": {
                     "type": "string",
                     "description": "Contrasena del usuario"
                 }
@@ -1047,7 +1047,7 @@
                     "type": "string",
                     "description": "Correo del usuario"
                 },
-                "contraseña": {
+                "password": {
                     "type": "string",
                     "description": "Contrasena del usuario"
                 }

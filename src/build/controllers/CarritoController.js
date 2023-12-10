@@ -26,7 +26,7 @@ class CarritoController {
             const { id_usuario } = req.params;
             const respuesta = yield database_1.default.query('SELECT * FROM carrito WHERE id_usuario = ?', [id_usuario]);
             if (respuesta.length > 0) {
-                res.json(respuesta[0]);
+                res.json(respuesta);
                 return;
             }
             res.status(404).json({ 'mensaje': 'No hay contenido en los carritos' });

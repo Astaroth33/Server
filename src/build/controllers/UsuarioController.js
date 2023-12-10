@@ -39,8 +39,8 @@ class UsuarioController {
             const parametros = {
                 alias: req.body.alias,
                 correo: req.body.correo,
-                contraseña: req.body.contraseña,
-                año_ingreso: new Date() // Utiliza new Date() para obtener la fecha actual
+                password: req.body.password,
+                ano_ingreso: new Date() // Utiliza new Date() para obtener la fecha actual
             };
             const consulta = 'INSERT INTO usuario SET ?';
             // Realiza la consulta
@@ -73,7 +73,7 @@ class UsuarioController {
             //console.log(req.body)
             const parametros = req.body;
             //console.log('${parametros.correo}');
-            var consulta = `SELECT id, alias FROM usuario WHERE correo = '${parametros.correo}' AND contraseña = '${parametros.contraseña}'`;
+            var consulta = `SELECT id, alias FROM usuario WHERE correo = '${parametros.correo}' AND password = '${parametros.password}'`;
             const resp = yield database_1.default.query(consulta);
             if (resp.length > 0)
                 res.json(resp);

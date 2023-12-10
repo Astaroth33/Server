@@ -2,9 +2,10 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = {
     database: {
-        host: 'localhost',
+        host: 'juegosutm.cwzwtazyslex.us-east-2.rds.amazonaws.com',
         user: 'root',
-        password: '',
-        database: 'portal_videojuegos'
+        password: 'S4t4n33*',
+        database: 'portal_videojuegos',
+        port: 3306
     }
 };
