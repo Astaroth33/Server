@@ -1,6 +1,6 @@
 export default{
     database: {
-        host:'juegosutm.cwzwtazyslex.us-east-2.rds.amazonaws.com',
+        host:'localhost',
         user: 'root',
         password:'S4t4n33*',
         database:'portal_videojuegos'
