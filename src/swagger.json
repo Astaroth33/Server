@@ -2,7 +2,7 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "Portal_Videojuegosss",
+        "title": "Portal_Videojuegos",
         "description": "<html><body> Punto de venta virtual de videojuegos </body></html>",
         "license": {
             "name": "MIT",

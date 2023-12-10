@@ -4,7 +4,7 @@ export default{
         user: 'root',
         password:'S4t4n33*',
         database:'portal_videojuegos',
-        port: 3306
+        port: 3000
         
     }
 }
