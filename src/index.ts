@@ -33,7 +33,7 @@ import VentasRoutes from './routes/VentasRoutes';
     }
     routes (): void
     {
-        this.app.use(indexRoutes);
+        //this.app.use(indexRoutes);
         this.app.use ('/api/usuario',UsuarioRoutes);
         this.app.use ('/api/biblioteca',bibliotecaRoutes);
         this.app.use ('/api/juegos',JuegosRoutes);
