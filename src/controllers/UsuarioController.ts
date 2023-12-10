@@ -24,8 +24,8 @@ public async createUsuario(req: Request, res: Response): Promise<void> {
     const parametros = {
         alias: req.body.alias,
         correo: req.body.correo,
-        contraseña: req.body.contraseña,
-        año_ingreso: new Date() // Utiliza new Date() para obtener la fecha actual
+        password: req.body.password,
+        ano_ingreso: new Date() // Utiliza new Date() para obtener la fecha actual
       };
       
       const consulta = 'INSERT INTO usuario SET ?';
@@ -57,7 +57,7 @@ public async ValidarUsuario(req: Request, res: Response): Promise<void> {
     //console.log(req.body)
     const parametros = req.body;
     //console.log('${parametros.correo}');
-    var consulta = `SELECT id, alias FROM usuario WHERE correo = '${parametros.correo}' AND contraseña = '${parametros.contraseña}'`;
+    var consulta = `SELECT id, alias FROM usuario WHERE correo = '${parametros.correo}' AND password = '${parametros.password}'`;
     const resp = await pool.query(consulta);
     if(resp.length>0)
         res.json(resp);
